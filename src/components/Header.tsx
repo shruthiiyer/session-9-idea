@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           className="logo"
           whileHover={{ scale: 1.05 }}
         >
-          <h1>Elena Rodriguez</h1>
+          <h1>Shruthi Iyer</h1>
           <span>Architect & Sculptor</span>
         </motion.div>
 

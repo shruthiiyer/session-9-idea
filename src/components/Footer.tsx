@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="footer-section">
-            <h3>Elena Rodriguez</h3>
+            <h3>Shruthi Iyer</h3>
             <p>Architect & Sculptor</p>
             <p className="footer-description">
               Creating timeless sculptures that transform spaces and inspire communities.
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <p>Barcelona, Spain</p>
-            <p>elena@sculpturestudio.com</p>
+            <p>shruthi@sculpturestudio.com</p>
             <p>+34 612 345 678</p>
           </div>
         </motion.div>
@@ -63,9 +63,9 @@ const Footer: React.FC = () => {
         >
           <div className="footer-bottom-content">
             <p>
-              Made with <Heart size={16} className="heart-icon" /> by Elena Rodriguez
+              Made with <Heart size={16} className="heart-icon" /> by Shruthi Iyer
             </p>
-            <p>&copy; 2024 Elena Rodriguez. All rights reserved.</p>
+            <p>&copy; 2024 Shruthi Iyer. All rights reserved.</p>
           </div>
           
           <motion.button 

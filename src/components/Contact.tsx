@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
                 <Mail size={20} />
                 <div>
                   <strong>Email</strong>
-                  <span>elena@sculpturestudio.com</span>
+                  <span>shruthi@sculpturestudio.com</span>
                 </div>
               </div>
 

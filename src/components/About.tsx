@@ -38,7 +38,7 @@ const About: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="about-text">
-            <h2>About Elena Rodriguez</h2>
+            <h2>About Shruthi Iyer</h2>
             <p className="about-intro">
               I am an architect and sculptor who believes in the transformative power of art in public spaces. 
               My work bridges the gap between architectural precision and artistic expression, creating pieces 
@@ -112,7 +112,7 @@ const About: React.FC = () => {
             between form and function, between the individual and the community, between the present 
             and the future."
           </blockquote>
-          <cite>— Elena Rodriguez</cite>
+          <cite>— Shruthi Iyer</cite>
         </motion.div>
       </div>
     </section>
