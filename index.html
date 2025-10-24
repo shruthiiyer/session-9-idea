@@ -1,14 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>session-9-idea</title>
-    <script type="module" crossorigin src="/assets/index-BqZlTR3j.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-_AmkVVBG.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruthi Iyer - Architect & Sculptor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin: 0;
+        }
+        
+        .logo span {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #e74c3c;
+        }
+        
+        main {
+            padding-top: 80px;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .highlight {
+            color: #e74c3c;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #7f8c8d;
+            margin-bottom: 2.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+        
+        .btn-secondary:hover {
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        .about {
+            background: #fff;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            color: #5a6c7d;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        
+        .portfolio {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .project-card p {
+            color: #64748b;
+            text-align: left;
+        }
+        
+        .contact {
+            background: #fff;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #bdc3c7;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <h1>Shruthi Iyer</h1>
+                    <span>Architect & Sculptor</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Sculpting Space,<br><span class="highlight">Shaping Dreams</span></h1>
+                    <p>Where architecture meets art, creating timeless sculptures that transform spaces and inspire the soul.</p>
+                    <a href="#portfolio" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Creating meaningful spaces through architectural sculpture</p>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Shruthi Iyer</h3>
+                        <p>I am an architect and sculptor who believes in the transformative power of art in public spaces. My work bridges the gap between architectural precision and artistic expression, creating pieces that not only serve as landmarks but as catalysts for community engagement and dialogue.</p>
+                        <p>With over 15 years of experience, I have dedicated my career to exploring how sculpture can enhance and redefine urban environments. Each piece I create is a response to its context, whether it's a bustling city square or a quiet gallery space.</p>
+                        <p>My approach combines traditional sculptural techniques with contemporary materials and innovative construction methods. I work closely with architects, engineers, and communities to ensure that every installation is not just visually striking, but structurally sound and socially meaningful.</p>
+                    </div>
+                    <div class="about-image">
+                        <div style="width: 300px; height: 400px; background: linear-gradient(135deg, #e74c3c, #c0392b); border-radius: 20px; margin: 0 auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section portfolio">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <p>Explore my collection of architectural sculptures and installations</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Metamorphosis</h3>
+                        <p>A large-scale public sculpture exploring the transformation of urban space through organic forms. Located in Barcelona, Spain.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Eternal Flow</h3>
+                        <p>An intimate gallery piece that captures the essence of time and movement in static form. Featured in Madrid, Spain.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Urban Genesis</h3>
+                        <p>A monumental work that reimagines the relationship between architecture and nature in urban environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2>Let's Create Something Extraordinary</h2>
+                <p>Ready to transform your space with architectural sculpture? Let's discuss your vision.</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>Whether you're planning a public art installation, looking for gallery pieces, or exploring collaborative opportunities, I'd love to hear from you.</p>
+                        
+                        <div class="contact-item">
+                            <strong>Email:</strong> shruthi@sculpturestudio.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong> +34 612 345 678
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong> Barcelona, Spain
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form>
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 2px solid #e2e8f0; border-radius: 8px;">
+                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 2px solid #e2e8f0; border-radius: 8px;">
+                            <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 2px solid #e2e8f0; border-radius: 8px;"></textarea>
+                            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with ❤️ by Shruthi Iyer</p>
+            <p>&copy; 2024 Shruthi Iyer. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
