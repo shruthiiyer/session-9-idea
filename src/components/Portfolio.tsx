@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, Calendar, MapPin } from 'lucide-react'
+import { ExternalLink, MapPin } from 'lucide-react'
 import './Portfolio.css'
 
 interface Project {
